@@ -1,0 +1,14 @@
+spring:
+    application:
+        name: friend-assistant-proxy
+
+server:
+    port: 7171
+
+logging:
+    level:
+        root: INFO
+        ru:
+            ezhov:
+                friendassistant:
+                    proxy: DEBUG
