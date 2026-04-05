@@ -22,9 +22,7 @@ class CommandDispatcher(private val commandRepository: CommandRepository) {
                 }
                 it
             }
-            .map { command ->
-                Runnable { command.handle(text) }
-            }
+            .map { command -> Runnable { command.handle(text) } }
         runnableCommands.forEach { executor.submit(it) }
     }
 }
